@@ -85,8 +85,8 @@ print('Day:  Outlook    Temperature  Humidity Wind PlayTennis Confidence')
    
 # Make predictions for test data
 for i in range(len(X_test)):
-    result = max(clf.predict_proba([X_test[i]])[0])  # Get predicted probabilities
-      # Confidence is the max probability
+    result = max(clf.predict_proba([X_test[i]])[0])  
+      
     
     if result >= 0.75:
         print(result)
