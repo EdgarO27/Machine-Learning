@@ -80,10 +80,13 @@ for i in dbTest:
             Y_test.append(transformations[val])
 #Printing the header os the solution
 #--> add your Python code here
-for i in range(len(X_test)):
 
+print('Day:  Outlook    Temperature  Humidity Wind PlayTennis Confidence')
    
-#Use your test samples to make probabilistic predictions. For instance: clf.predict_proba([[3, 1, 2, 1]])[0]
-#--> add your Python code here
-
-
+# Make predictions for test data
+for i in range(len(X_test)):
+    result = max(clf.predict_proba([X_test[i]])[0])  # Get predicted probabilities
+      # Confidence is the max probability
+    
+    if result >= 0.75:
+        print(result)
