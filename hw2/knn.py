@@ -19,7 +19,7 @@ with open('email_classification.csv', 'r') as csvfile:
   reader = csv.reader(csvfile)
   for i, row in enumerate(reader):
       if i > 0: #skipping the header
-         db.append (row)
+        db.append (row)
 num_errors = []
 #Loop your data to allow each instance to be your test set
 for i in db:
