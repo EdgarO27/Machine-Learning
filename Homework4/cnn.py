@@ -91,4 +91,6 @@ model.fit(X_train, Y_train, batch_size=32, epochs=10, validation_data=(X_test, Y
 loss, acc = model.evaluate(X_test, Y_test)
 
 # Printing the test accuracy
-print(acc)
+print("Accuracy:" ,acc)
+
+print("Loss:" ,loss)
